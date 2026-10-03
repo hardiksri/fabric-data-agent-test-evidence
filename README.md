@@ -49,6 +49,7 @@ Can the same user still access data already copied into Code Interpreter?
 5. [Post-revocation artifact lifecycle](tests/05-post-revocation-artifact-lifecycle/README.md)
 
 Supporting material:
+- [Post-revocation findings](docs/POST-REVOCATION-FINDINGS.md)
 - [Test matrix](docs/TEST-MATRIX.md)
 - [Methodology](docs/METHODOLOGY.md)
 - [Limitations](docs/LIMITATIONS.md)
@@ -85,6 +86,6 @@ The repository includes machine-readable evidence for:
 
 ## Screenshot note
 
-All 45 screenshots shared during the POC are preserved in the downloadable evidence pack and inventoried in `docs/SCREENSHOT-MANIFEST.md`. The GitHub connector available in this chat supports UTF-8 repository files but not binary PNG upload, so the PNGs need to be added from the evidence pack into the matching `evidence/` folders.
+All screenshots shared during the POC are preserved in the downloadable evidence pack and inventoried in `docs/SCREENSHOT-MANIFEST.md`. The GitHub connector available in this chat supports UTF-8 repository files but not binary PNG upload, so the PNGs need to be added from the evidence pack into the matching `evidence/` folders.
 
 POC evidence captured during September–October 2026.
