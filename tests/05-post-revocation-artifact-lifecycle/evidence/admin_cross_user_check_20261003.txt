@@ -1,3 +1,1 @@
 MATCH_COUNT: 0
-
-Context: executed under the administrator/control identity in a separate Code Interpreter context after a governed semantic-model query. The target filename suffix searched was ci_post_revoke_test_20261003_v2.csv.
