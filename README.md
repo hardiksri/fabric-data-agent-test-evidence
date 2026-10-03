@@ -40,6 +40,22 @@ MATERIALIZED ARTIFACT LIFECYCLE
 Can the same user still access data already copied into Code Interpreter?
 ```
 
+## Repository structure
+
+```text
+.
+├── docs/                      # methodology, findings, evidence maps and limitations
+├── test-assets/               # TMDL and reproducible test plan
+└── tests/
+    ├── 01-ols-enforcement/
+    ├── 02-governed-code-interpreter-flow/
+    ├── 03-sandbox-persistence-and-isolation/
+    ├── 04-runtime-and-guardrails/
+    └── 05-post-revocation-artifact-lifecycle/
+```
+
+Each test folder contains a short README and an `evidence/` folder. Superseded duplicate captures and exploratory screenshots have been removed so the repository keeps the clearest evidence set.
+
 ## Test areas
 
 1. [OLS enforcement](tests/01-ols-enforcement/README.md)
@@ -50,6 +66,7 @@ Can the same user still access data already copied into Code Interpreter?
 
 Supporting material:
 - [Post-revocation findings](docs/POST-REVOCATION-FINDINGS.md)
+- [Article evidence map](docs/ARTICLE-EVIDENCE-MAP.md)
 - [Test matrix](docs/TEST-MATRIX.md)
 - [Methodology](docs/METHODOLOGY.md)
 - [Limitations](docs/LIMITATIONS.md)
@@ -57,7 +74,6 @@ Supporting material:
 - [Screenshot evidence manifest](docs/SCREENSHOT-MANIFEST.md)
 - [Post-revocation test plan](test-assets/Fabric_Data_Agent_Post_Revocation_Artifact_Test_Plan.md)
 - [OLS test role TMDL](test-assets/Apply_OLS_Test_Role.tmdl)
-- [Public upload review](PUBLIC-UPLOAD-REVIEW.md)
 
 ## Post-revocation evidence chain
 
@@ -84,8 +100,8 @@ The repository includes machine-readable evidence for:
 - Run Steps and generated Python must be inspected; the final natural-language response alone may hide reconstruction/write behavior.
 - Cross-user negative search supports isolation in the tested environment but does not reveal Microsoft's internal isolation implementation.
 
-## Screenshot note
+## Screenshot evidence
 
-All screenshots shared during the POC are preserved in the downloadable evidence pack and inventoried in `docs/SCREENSHOT-MANIFEST.md`. The GitHub connector available in this chat supports UTF-8 repository files but not binary PNG upload, so the PNGs need to be added from the evidence pack into the matching `evidence/` folders.
+The curated screenshots are stored directly under each test's `evidence/` directory. See [docs/SCREENSHOT-MANIFEST.md](docs/SCREENSHOT-MANIFEST.md) for the current evidence inventory and [docs/ARTICLE-EVIDENCE-MAP.md](docs/ARTICLE-EVIDENCE-MAP.md) for recommended article placement.
 
 POC evidence captured during September–October 2026.
