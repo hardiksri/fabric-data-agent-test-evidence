@@ -53,7 +53,27 @@ Supporting material:
 - [Methodology](docs/METHODOLOGY.md)
 - [Limitations](docs/LIMITATIONS.md)
 - [Evidence gaps](docs/EVIDENCE-GAPS.md)
+- [Screenshot evidence manifest](docs/SCREENSHOT-MANIFEST.md)
+- [Post-revocation test plan](test-assets/Fabric_Data_Agent_Post_Revocation_Artifact_Test_Plan.md)
+- [OLS test role TMDL](test-assets/Apply_OLS_Test_Role.tmdl)
 - [Public upload review](PUBLIC-UPLOAD-REVIEW.md)
+
+## Post-revocation evidence chain
+
+Primary artifact:
+
+```text
+ci_post_revoke_test_20261003_v2.csv
+Size: 104 bytes
+SHA-256: f50ce54091d0e1898d53637c8bd42ff36aba75a25d7e859a574ae97df34bfede
+```
+
+The repository includes machine-readable evidence for:
+- content read after source access revocation
+- same-user/new-chat persistence after revocation
+- different-user negative visibility check
+- older-artifact retention check
+- artifact state after source access was restored
 
 ## Important interpretation rules
 
@@ -62,5 +82,9 @@ Supporting material:
 - Same-user persistence is not a retention SLA.
 - Run Steps and generated Python must be inspected; the final natural-language response alone may hide reconstruction/write behavior.
 - Cross-user negative search supports isolation in the tested environment but does not reveal Microsoft's internal isolation implementation.
+
+## Screenshot note
+
+All 45 screenshots shared during the POC are preserved in the downloadable evidence pack and inventoried in `docs/SCREENSHOT-MANIFEST.md`. The GitHub connector available in this chat supports UTF-8 repository files but not binary PNG upload, so the PNGs need to be added from the evidence pack into the matching `evidence/` folders.
 
 POC evidence captured during September–October 2026.
