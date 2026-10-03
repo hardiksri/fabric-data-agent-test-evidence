@@ -1,4 +1,7 @@
-# 02 — Governed Code Interpreter Flow
+# 02 — Governed Semantic Model → Code Interpreter Flow
+
+## Goal
+Validate the execution path from governed semantic-model retrieval into Code Interpreter.
 
 ## Observed path
 
@@ -9,13 +12,26 @@ Generated DAX
     ↓
 Authorized result
     ↓
-JSON artifact under /mnt/data
+Tool-result artifact under /mnt/data
     ↓
 Code Interpreter
     ↓
-Python / pandas
+Generated Python
     ↓
-Derived CSV/TXT
+Derived CSV/TXT artifact
 ```
 
-The POC showed that semantic-model retrieval occurred before Python processing and that generated DAX/Python were visible in Run Steps.
+## Observed
+- Semantic-model retrieval occurred before Python processing.
+- Generated DAX was visible in Run Steps.
+- Generated Python read the governed result artifacts under `/mnt/data`.
+- Code Interpreter created a CSV and returned deterministic file metadata including size and SHA-256.
+
+## Evidence
+See [`evidence/`](evidence/) for the curated October 3 execution screenshots:
+- artifact creation Run Steps
+- artifact filename/size/hash result
+- generated DAX
+- generated Python using governed input
+
+The artifact used by the later lifecycle test is documented in Test 05.
