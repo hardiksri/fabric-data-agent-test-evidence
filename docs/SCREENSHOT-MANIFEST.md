@@ -50,6 +50,7 @@
 - `15-post-revoke-content-check.png`
 - `16-cross-user-admin-match-count-zero.png`
 - `17-post-restore-artifact-check.png`
+- `18-semantic-model-read-restored.png`
 - `exploratory-20261003-035618.png`
 - `exploratory-20261003-035623.png`
 - `exploratory-20261003-035648.png`
@@ -60,4 +61,25 @@
 - `exploratory-20261003-040718.png`
 - `exploratory-20261003-040915.png`
 
-The complete local evidence pack contains all 45 screenshots. The connected GitHub contents action available in this chat can write UTF-8 text files but does not support binary PNG upload; use the downloadable pack from the chat to add the images to the matching evidence folders.
+## Additional October 3 evidence captures
+
+The later capture set also includes closer/cleaner screenshots of:
+
+- semantic-model share-link Read permission
+- workspace state with restricted user absent from workspace roles
+- semantic-model direct Read permission
+- OLS role membership
+- OLS-protected Company Name query response
+- authorized Total Sales by Region query
+- Code Interpreter artifact-creation prompt and Run Steps
+- artifact filename, size and SHA-256 result
+- generated DAX
+- generated Python reading governed result artifacts
+- source-query failure after Read revocation
+- permission-removal confirmation
+- post-revocation Code Interpreter execution
+- post-revocation read-only Run Steps
+- post-revocation content-check evidence
+- semantic-model Read permission restored
+
+The complete local evidence pack contains the source PNGs. The connected GitHub contents action available in this chat can write UTF-8 text files but does not support binary PNG upload; use the downloadable pack from the chat to add the images to the matching evidence folders.
