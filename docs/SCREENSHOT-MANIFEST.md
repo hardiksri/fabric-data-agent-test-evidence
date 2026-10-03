@@ -1,30 +1,30 @@
 # Screenshot Evidence Manifest
 
-## 01-ols-enforcement
+This manifest lists the curated screenshots retained in the repository after removing superseded duplicates and exploratory captures.
 
-- `00-workspace-overview-before.png`
-- `01-semantic-model-direct-access-before.png`
-- `02-ols-role-membership-before.png`
-- `03-workspace-overview-after.png`
-- `04-data-agent-direct-read-access.png`
-- `05-semantic-model-access-state.png`
-- `06-ols-role-membership-restricted-user.png`
-- `07-ols-company-name-unavailable.png`
-- `08-authorized-region-query.png`
-- `09-clean-ols-baseline-company-name.png`
-- `10-clean-authorized-region-query.png`
+## 01 — OLS enforcement
 
-## 02-governed-code-interpreter-flow
+Path: `tests/01-ols-enforcement/evidence/`
 
-- `01-ci-source-retrieval-requirement.png`
-- `02-simple-code-interpreter-arithmetic.png`
-- `03-governed-result-python-processing.png`
-- `05-generated-python-artifact-check.png`
-- `11-user-b-governed-dax.png`
-- `12-user-b-own-artifact-only.png`
-- `14-explicit-https-request-refused.png`
+- `11-semantic-model-share-link-read.png` — semantic-model sharing link grants Read.
+- `12-workspace-restricted-user-absent.png` — restricted test user is not a workspace role member.
+- `13-semantic-model-direct-read.png` — test user has semantic-model Read.
+- `14-ols-role-membership.png` — test user is a member of `DataAgent_OLS_Test`.
+- `15-company-name-ols-block.png` — `Company Name` is unavailable to the restricted identity.
+- `16-authorized-region-query.png` — authorized `Total Sales by Region` query succeeds.
 
-## 03-sandbox-persistence-and-isolation
+## 02 — Governed semantic-model → Code Interpreter flow
+
+Path: `tests/02-governed-code-interpreter-flow/evidence/`
+
+- `20-artifact-creation-run-steps.png` — semantic-model retrieval followed by Code Interpreter execution.
+- `21-artifact-created-hash-result.png` — created CSV metadata, size and SHA-256.
+- `22-generated-dax.png` — generated DAX for `Total Sales by Region`.
+- `23-generated-python-governed-input.png` — generated Python reading governed tool-result artifacts.
+
+## 03 — Sandbox persistence and isolation
+
+Path: `tests/03-sandbox-persistence-and-isolation/evidence/`
 
 - `04-same-chat-artifact-visible.png`
 - `06-new-chat-first-check-inconclusive.png`
@@ -33,7 +33,11 @@
 - `09-user-a-isolation-artifact-created.png`
 - `10-user-a-isolation-check.png`
 
-## 04-runtime-and-guardrails
+These are retained because they document the earlier persistence/isolation POC that motivated the later October 3 lifecycle test.
+
+## 04 — Runtime and guardrails
+
+Path: `tests/04-runtime-and-guardrails/evidence/`
 
 - `13-network-egress-policy-test.png`
 - `15-environment-variable-enumeration-refused.png`
@@ -41,45 +45,23 @@
 - `17-installed-package-summary.png`
 - `18-controlled-keyerror-test.png`
 
-## 05-post-revocation-artifact-lifecycle
+## 05 — Post-revocation artifact lifecycle
 
-- `11-v2-artifact-created.png`
-- `12-fresh-query-blocked-after-revocation.png`
-- `13-readonly-inspection-wrapper-result.png`
-- `14-post-revoke-artifact-evidence-file-created.png`
-- `15-post-revoke-content-check.png`
-- `16-cross-user-admin-match-count-zero.png`
-- `17-post-restore-artifact-check.png`
-- `18-semantic-model-read-restored.png`
-- `exploratory-20261003-035618.png`
-- `exploratory-20261003-035623.png`
-- `exploratory-20261003-035648.png`
-- `exploratory-20261003-035711.png`
-- `exploratory-20261003-040111.png`
-- `exploratory-20261003-040209.png`
-- `exploratory-20261003-040508.png`
-- `exploratory-20261003-040718.png`
-- `exploratory-20261003-040915.png`
+Path: `tests/05-post-revocation-artifact-lifecycle/evidence/`
 
-## Additional October 3 evidence captures
+- `20-fresh-source-query-blocked.png` — fresh semantic-model retrieval fails after Read revocation.
+- `21-permission-removal-confirmed.png` — permission state after source Read removal.
+- `22-post-revoke-ci-executes.png` — Code Interpreter remains callable in the existing context.
+- `23-post-revoke-readonly-run-steps.png` — read-only artifact inspection Run Steps.
+- `24-post-revoke-content-check.png` — previously materialized CSV remains readable.
+- `25-semantic-model-read-restored.png` — semantic-model Read restored.
 
-The later capture set also includes closer/cleaner screenshots of:
+Machine-readable evidence in the same folder provides the stronger deterministic checks for same-user/new-chat persistence, cross-user negative visibility, artifact content, size and SHA-256.
 
-- semantic-model share-link Read permission
-- workspace state with restricted user absent from workspace roles
-- semantic-model direct Read permission
-- OLS role membership
-- OLS-protected Company Name query response
-- authorized Total Sales by Region query
-- Code Interpreter artifact-creation prompt and Run Steps
-- artifact filename, size and SHA-256 result
-- generated DAX
-- generated Python reading governed result artifacts
-- source-query failure after Read revocation
-- permission-removal confirmation
-- post-revocation Code Interpreter execution
-- post-revocation read-only Run Steps
-- post-revocation content-check evidence
-- semantic-model Read permission restored
+## Primary artifact
 
-The complete local evidence pack contains the source PNGs. The connected GitHub contents action available in this chat can write UTF-8 text files but does not support binary PNG upload; use the downloadable pack from the chat to add the images to the matching evidence folders.
+```text
+ci_post_revoke_test_20261003_v2.csv
+Size: 104 bytes
+SHA-256: f50ce54091d0e1898d53637c8bd42ff36aba75a25d7e859a574ae97df34bfede
+```
