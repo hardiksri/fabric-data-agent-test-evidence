@@ -1,8 +1,0 @@
-createOrReplace
-
-	role 'DataAgent_OLS_Test'
-		modelPermission: read
-
-		tablePermission Customer
-			columnPermission 'Company Name'
-				metadataPermission: none
