@@ -1,0 +1,10 @@
+EXACT_FILENAME: assistant-LtYPbWdonwqcHkNWdYVGvn-ci_post_revoke_test_20261003_v2.csv
+ROW_COUNT: 5
+HEADER: ['Location Region', 'Total Sales']
+ROW_1: ['Central', '5253579.11']
+ROW_2: ['South', '3528326.78']
+ROW_3: ['West', '2924582.2']
+ROW_4: ['East', '2379977.1']
+ROW_5: ['', '12229.46']
+FILE_SIZE_BYTES: 104
+SHA256: f50ce54091d0e1898d53637c8bd42ff36aba75a25d7e859a574ae97df34bfede
