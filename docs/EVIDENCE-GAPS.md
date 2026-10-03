@@ -1,10 +1,10 @@
 # Evidence Gaps / Nice-to-Have Additions
 
-The current pack is sufficient to document the main POC findings.
+The current repository is sufficient to document the main POC findings.
 
-Additional raw evidence that would improve completeness:
-1. The downloadable `admin_cross_user_check_20261003.txt` from the cross-user test (currently evidenced by screenshot + generated code).
-2. A screenshot showing the semantic-model Read permission after it was restored (the successful fresh query already demonstrates restored effective access).
-3. If retention duration is tested later, add timestamped checks at 6h / 24h / 48h / 7d for the same artifact/hash.
+Additional evidence that would improve completeness:
+1. A screenshot showing the semantic-model Read permission after it was restored. The successful fresh query already demonstrates restored effective access, so this is optional.
+2. If retention duration is tested later, add timestamped checks at 6h / 24h / 48h / 7d for the same artifact/hash.
+3. The GitHub connector available in this chat supports UTF-8 repository files but not binary PNG uploads. All 45 source screenshots are preserved in the downloadable evidence pack and are listed in `docs/SCREENSHOT-MANIFEST.md` for manual upload into the matching evidence folders.
 
 No further evidence is required to document the current post-revocation conclusion.
